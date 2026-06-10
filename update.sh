@@ -2,6 +2,8 @@
 
 echo "Update"
 sudo apt update
+
+echo "apt-list"
 sudo apt list --upgradable
 
 echo "Upgrade"
