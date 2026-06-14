@@ -240,3 +240,18 @@ Successfully deployed and validated an Nginx web server, created backups of web 
 
 **Cloud Engineer Skills Developed:** Linux Administration, Nginx Management, Network Troubleshooting, Service Validation, and Problem Solving.
 
+## Evidence
+
+### Nginx Backup Troubleshooting
+
+This screenshot shows the troubleshooting process for creating a backup of the default Nginx page.
+
+![Nginx Backup Troubleshooting](screenshots/nginx-backup-troubleshooting.png)
+
+---
+
+### Nginx Port Verification
+
+This screenshot shows verification that Nginx was listening on port 80 and the investigation using the `ss` command.
+
+![Nginx Port Verification](screenshots/nginx-port-verification.png)
