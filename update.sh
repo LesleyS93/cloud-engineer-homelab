@@ -3,8 +3,8 @@
 echo "Update"
 sudo apt update
 
-echo "apt-list"
-sudo apt list --upgradable
+echo "Remove"
+sudo apt autoremove -y
 
 echo "Upgrade"
 sudo apt upgrade -y
