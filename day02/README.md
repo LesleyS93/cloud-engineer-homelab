@@ -71,3 +71,99 @@ These concepts relate directly to:
 ## Notes
 
 Understanding Linux permissions is essential for cloud engineering and server administration.
+
+
+
+## Troubleshooting
+
+
+
+### Issue: Unable to Amend Commit Message
+
+
+
+#### Problem
+
+
+
+When attempting to change the previous commit message, Git returned the following error:
+
+
+
+```bash
+
+error: pathspec '2' did not match any file(s) known to git
+
+error: pathspec 'Linux' did not match any file(s) known to git
+
+error: pathspec 'users' did not match any file(s) known to git
+
+```
+
+
+
+#### Cause
+
+
+
+The commit message contained spaces and was not enclosed in quotation marks.
+
+
+
+Incorrect command:
+
+
+
+```bash
+
+git commit --amend -m Day 2 - Linux users groups and permissions
+
+```
+
+
+
+Git interpreted each word after `Day` as a file path instead of part of the commit message.
+
+
+
+#### Solution
+
+
+
+Enclose the entire commit message in double quotes:
+
+
+
+```bash
+
+git commit --amend -m "Day 2 - Linux users groups and permissions"
+
+```
+
+
+
+Verify the updated commit message:
+
+
+
+```bash
+
+git log --oneline -1
+
+```
+
+
+
+If the commit had already been pushed to GitHub, force-push the updated commit:
+
+
+
+```bash
+
+git push --force
+
+```
+
+
+
+###
